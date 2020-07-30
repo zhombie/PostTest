@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import q19.kenes_widget.KenesWidget;
+import q19.kenes_widget.ui.presentation.KenesWidgetV2Activity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        startActivity(KenesWidget.open(this, new KenesWidget.EntryParams("https://help.post.kz")));
+        startActivity(KenesWidgetV2Activity.newIntent(this, "https://help.post.kz"));
     }
 }
 
